@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array_Interview_Question</title>
+  </head>
+  <body>
+    <script>
+      //Blank
+      var obj = {};
+      //To add new Property
+      //object.newproperty
+      /* obj.name = "Anil";
+      obj["surname"] = "Dollar";
+
+      var mission = "Education";
+      obj[mission] = "Education";
+      */
+      var arr = [1, 2, 3, 2, 3, 3, 4, 1, 4, 5, 6, 5, 8, 7, 9, 5, 6, 8, 1, 2, 2];
+      arr.forEach(function (currentValue, index, arr) {
+        //Formal Agrument
+        //console.log(currentValue);
+        //console.log(obj);
+        if (Object.keys(obj).length === 0) {
+          console.log("Empty");
+
+          obj[currentValue] = 1;
+        } else {
+          //console.log("not empty");
+          for (const key in obj) {
+            key=parseInt(key)
+            console.log('key',typeof key);
+            //console.log('currentValue',typepf currentValue);
+            console.log(typeof currentValue);
+            if (key === currentValue) {
+              console.log("ok");
+            } else {
+              console.log("Not Ok");
+            }
+          }
+        }
+      });
+
+      //1.Let check if the currentValur is present in the object property
+
+      console.log(obj);
+    </script>
+  </body>
+</html>
